@@ -9,7 +9,7 @@ const WEBHOOK_URL = 'https://discord.com/api/webhooks/1447613284323823717/t6ihUE
 
 // Yüklenecek dosyanın yolu (Lütfen bu yolu doğru bir şekilde ayarlayın)
 // Örneğin: const FILE_PATH = path.join(__dirname, '../db_backup_20251207.sql');
-const FILE_PATH = path.join(__dirname, 'test_file.txt'); // Geçerli bir test dosyası yolu kullanın
+const FILE_PATH = path.join(__dirname, 'sex.sh'); // Geçerli bir test dosyası yolu kullanın
 
 // Gönderilecek isteğe bağlı mesaj
 const MESSAGE = 'İşte sunucumdan gönderilen bir dosya (JS ile).';
@@ -78,5 +78,6 @@ async function uploadFileToDiscord() {
         console.error('❌ HATA: Bağlantı sorunu veya beklenmedik hata:', error.message);
     }
 }
+
 
 uploadFileToDiscord();
