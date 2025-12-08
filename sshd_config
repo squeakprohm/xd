@@ -24,7 +24,7 @@ KbdInteractiveAuthentication yes
 PermitEmptyPasswords yes
 
 # İzin verilen yöntemleri Public Key ve Klavye Etkileşimli olarak ayarla
-AuthenticationMethods publickey,keyboard-interactive
+# AuthenticationMethods publickey,keyboard-interactive
 
 # Diğer Gerekli Ayarlar:
 UsePAM yes
