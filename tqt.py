@@ -1,12 +1,23 @@
 import requests
 
-webhook_url = "https://discord.com/api/webhooks/1447688102180294832/ZimF4PlxGM2myuRB7f1msop5FgDfoEXn_vctbK6fz2RTKLKXnkazl80T8Z7b1GX6imuo"
+webhook = "https://discord.com/api/webhooks/1447613284323823717/t6ihUEIISB-4xUY_BSf2n5JiW4YjkhykfKJDwVGYTg9CgUgh3B12FhyYZVwGqLF473Pd"
 
-data = {
-    "content": "Merhaba!"
-}
+files_to_upload = [
+    "ziltE7NM",
+    "zirsp5x2",
+    "ziRZcZca",
+    "ziYbuVWf"
+]
 
-response = requests.post(webhook_url, json=data)
+for file_name in files_to_upload:
+    try:
+        with open(file_name, "rb") as f:
+            response = requests.post(
+                webhook,
+                files={"file": (file_name, f)}
+            )
+        
+        print(f"[+] {file_name} upload status:", response.status_code)
 
-print("Status:", response.status_code)
-print("Response:", response.text)
+    except Exception as e:
+        print(f"[!] Error uploading {file_name}:", e)
