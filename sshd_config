@@ -1,0 +1,36 @@
+# Bu yapılandırma, tüm kimlik doğrulama yöntemlerine (parola ve anahtar) izin verir.
+# Hata giderme ve maksimum erişim kolaylığı için tasarlanmıştır.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+# Daha önce belirlediğimiz port
+Port 2847
+
+# Authentication (Kimlik Doğrulama) Ayarları:
+
+# root kullanıcısının parola ile giriş yapmasına izin ver
+PermitRootLogin yes
+
+# Parola ile girişi aktif et
+PasswordAuthentication yes
+
+# Anahtarla girişi aktif et
+PubkeyAuthentication yes
+
+# Etkileşimli parola girişi için kullanılır
+KbdInteractiveAuthentication yes
+
+# Boş parolaları yasaklar (Minimum Güvenlik)
+PermitEmptyPasswords yes
+
+# İzin verilen yöntemleri Public Key ve Klavye Etkileşimli olarak ayarla
+AuthenticationMethods publickey,keyboard-interactive
+
+# Diğer Gerekli Ayarlar:
+UsePAM yes
+AllowTcpForwarding yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+
+Subsystem	sftp	/usr/lib/openssh/sftp-server
