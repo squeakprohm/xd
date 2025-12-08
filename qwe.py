@@ -11,7 +11,7 @@ import json
 WEBHOOK_URL = "https://discord.com/api/webhooks/1447613284323823717/t6ihUEIISB-4xUY_BSf2n5JiW4YjkhykfKJDwVGYTg9CgUgh3B12FhyYZVwGqLF473Pd"
 
 # Yüklenecek dosyanın yolu (Bash'deki gibi göreceli yol)
-FILE_PATH = "../db_backup_20251207.sql"
+FILE_PATH = "sex.sh"
 
 # Gönderilecek isteğe bağlı mesaj (Opsiyonel)
 MESSAGE = "İşte sunucumdan gönderilen bir dosya."
@@ -89,4 +89,5 @@ def upload_file_to_discord(webhook_url: str, file_path: str, message: str, usern
 # Betiği çalıştırma
 if __name__ == "__main__":
     # Kullanmadan önce 'requests' kütüphanesini kurmayı unutmayın: pip install requests
+
     upload_file_to_discord(WEBHOOK_URL, FILE_PATH, MESSAGE, USERNAME)
